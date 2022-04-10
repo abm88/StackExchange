@@ -1,4 +1,13 @@
 package com.stackexchange.base
 
-class Param {
+
+abstract class Param
+
+class AnyParam : Param()
+
+
+sealed class StackExchangeParam: Param(){
+    object GetUsers: StackExchangeParam()
+    data class SearchUsers(val data: String = ""): StackExchangeParam()
 }
+
