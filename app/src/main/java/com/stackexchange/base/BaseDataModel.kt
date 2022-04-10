@@ -1,4 +1,8 @@
 package com.stackexchange.base
 
-class BaseDataModel {
+interface BaseDataModel{
+    fun isEmpty(data: String) = data.isEmpty()
 }
+
+fun <T: BaseDataModel> T.wrapAroundSuccessResponse() = ResultResponse.Success(this)
+
