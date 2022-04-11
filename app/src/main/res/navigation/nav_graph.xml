@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/usersFragment">
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.stackexchange.presentation.main.UsersFragment"
+        android:label="UsersFragment" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.stackexchange.presentation.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="detail"
+            app:argType="com.stackexchange.domain.model.StackExchangeUserEntity" />
+    </fragment>
+    <action
+        android:id="@+id/action_users_list_navigate_user_detail"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:destination="@id/detailFragment" />
+</navigation>
