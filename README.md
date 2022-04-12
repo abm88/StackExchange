@@ -1,3 +1,6 @@
+![Screenshot_1649777419](https://user-images.githubusercontent.com/5457179/163000081-65723a43-adb3-4d40-b550-60b861eaa5f5.png)
+![Screenshot_1649777414](https://user-images.githubusercontent.com/5457179/163000104-b93b05ad-c297-4bee-bd7c-914e9f199645.png)
+![Screenshot_1649777396](https://user-images.githubusercontent.com/5457179/163000108-1c66c927-b4ca-4c77-a043-459ed9ed1bb2.png)
 # StackExchange
 
 # StackExchange Users:
@@ -26,4 +29,4 @@ Code base consists of 3 layers based on clean architecture, first layer is prese
 - Jetpack Compose
 
 ### How to build:
-Download or clone the project in Android Studio build and run, if there is any conflict or issue in build system, try to sync project with gradle files by click on the menu -> file -> sync project with gradle files
+Download or clone the project in Android Studio build and run, if there is any conflict or issue in build system, try to sync project with gradle files by click on the menu -> file -> sync project with gradle files.
