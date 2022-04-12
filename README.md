@@ -1,10 +1,9 @@
+### Project screenshots:
 ![Screenshot_1649777419](https://user-images.githubusercontent.com/5457179/163000081-65723a43-adb3-4d40-b550-60b861eaa5f5.png)
 ![Screenshot_1649777414](https://user-images.githubusercontent.com/5457179/163000104-b93b05ad-c297-4bee-bd7c-914e9f199645.png)
 ![Screenshot_1649777396](https://user-images.githubusercontent.com/5457179/163000108-1c66c927-b4ca-4c77-a043-459ed9ed1bb2.png)
+
 # StackExchange
-
-# StackExchange Users:
-
 App consists of main screen that shows a list of StackExchange users with a search section. Clicking on search icon the search box becomes editable and clicking on search result item opens the detail screen that shows some details of the user.
 
 See below the instructions for each one of these:
