@@ -2,6 +2,7 @@ package com.stackexchange.presentation.detail
 
 import android.content.Intent
 import android.net.Uri
+import androidx.appcompat.app.AppCompatActivity
 import com.stackexchange.R
 import com.stackexchange.base.ui.ViewModelErrorSuccessFragment
 import com.stackexchange.domain.model.StackExchangeUserEntity
@@ -32,5 +33,10 @@ class DetailFragment: ViewModelErrorSuccessFragment<StackExchangeState, StackExc
             imageLoader.loadImage(
                 detailImageView, 0, 0, avatar)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 }

@@ -1,6 +1,7 @@
 package com.stackexchange.presentation.main
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.navigation.fragment.findNavController
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -72,7 +73,10 @@ class UsersFragment :
         viewModel.handleEvent(StackExchangeEvent.GetUsers)
     }
 
-
+    override fun onResume() {
+        super.onResume()
+        (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+    }
     override fun showLoadingSpinner(loading: Boolean) {
         super.showLoadingSpinner(loading)
         topStoriesProgressBar.show(loading)

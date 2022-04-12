@@ -28,11 +28,6 @@ class MainActivity : BaseActivity<StackExchangeState, StackExchangeEvent, StackE
         }
     }
 
-    override fun initView() {
-        super.initView()
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
     override fun onSupportNavigateUp(): Boolean {
         return findNavController(R.id.nav_host_fragment).navigateUp()
                 || super.onSupportNavigateUp()
