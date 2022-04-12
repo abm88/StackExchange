@@ -8,11 +8,11 @@ import com.stackexchange.domain.model.StackExchangeUserEntity
 import com.stackexchange.presentation.main.StackExchangeViewModel
 import com.stackexchange.presentation.stack_exchange.StackExchangeEvent
 import com.stackexchange.presentation.stack_exchange.StackExchangeState
-import kotlinx.android.synthetic.main.detail_screen.*
+import kotlinx.android.synthetic.main.detailt_screen.*
 
 
 class DetailFragment: ViewModelErrorSuccessFragment<StackExchangeState, StackExchangeEvent, StackExchangeViewModel>(){
-    override val contentResourceId: Int = R.layout.detail_screen
+    override val contentResourceId: Int = R.layout.detailt_screen
 
     override fun getViewModelClass(): Class<StackExchangeViewModel> = StackExchangeViewModel::class.java
 

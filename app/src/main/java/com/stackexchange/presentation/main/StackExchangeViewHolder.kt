@@ -18,9 +18,9 @@ class StackExchangeViewHolder constructor(
 
     companion object {
         fun create(
-            parent: ViewGroup,
-            callback: (entity: CallbackParam) -> Unit,
-            imageLoader: ImageLoader
+                parent: ViewGroup,
+                callback: (entity: CallbackParam) -> Unit,
+                imageLoader: ImageLoader
         ) = StackExchangeViewHolder(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_user_grid, parent, false), callback, imageLoader
@@ -38,10 +38,10 @@ class StackExchangeViewHolder constructor(
         itemView.itemStoryTitle.text = story.userName
         itemView.itemStoryDateTime.text = story.createDate
         imageLoader.loadImage(
-            itemView.itemStoryImage,
-            0,
-            0,
-            story.avatar
+                itemView.itemStoryImage,
+                0,
+                0,
+                story.avatar
         )
     }
 }

@@ -60,3 +60,5 @@ abstract class GeneralUseCase<PARAMS : Param, RESULT>(private val errorContainer
         strategy: RepositoryStrategy
     ): Flow<ResultResponse<RESULT>>
 }
+
+

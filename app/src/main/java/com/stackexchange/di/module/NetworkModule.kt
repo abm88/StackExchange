@@ -32,7 +32,7 @@ class NetworkModule {
             .writeTimeout(10, TimeUnit.SECONDS)
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BODY
-            }).build()
+             }).build()
 
     @Provides
     @Singleton

@@ -23,11 +23,13 @@ class UsersFragment :
 
     @FlowPreview
     private val storyCallback: (item: CallbackParam) -> Unit = {
-        when(it){
+        when (it) {
             is CallbackParam.Click -> {
-                findNavController().navigate(R.id.action_users_list_navigate_user_detail, Bundle().apply {
-                    putParcelable("user_detail", it.data)
-                })
+                findNavController().navigate(
+                    R.id.action_users_list_navigate_user_detail,
+                    Bundle().apply {
+                        putParcelable("user_detail", it.data)
+                    })
             }
             else -> {
                 throw IllegalArgumentException("Unknown callback param: $it")
@@ -36,25 +38,26 @@ class UsersFragment :
 
     }
 
-    override fun getViewModelClass(): Class<StackExchangeViewModel> = StackExchangeViewModel::class.java
+    override fun getViewModelClass(): Class<StackExchangeViewModel> =
+        StackExchangeViewModel::class.java
 
     override val contentResourceId: Int = R.layout.exchange_stack_screen
 
     @FlowPreview
     override fun initView() {
         super.initView()
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
-                if(query.isEmpty()){
+                if (query.isEmpty()) {
                     viewModel.handleEvent(StackExchangeEvent.GetUsers)
-                }else {
+                } else {
                     viewModel.handleEvent(StackExchangeEvent.SearchUsers(query))
                 }
                 return false
             }
 
             override fun onQueryTextChange(newText: String): Boolean {
-                if (newText.isEmpty()){
+                if (newText.isEmpty()) {
                     viewModel.handleEvent(StackExchangeEvent.GetUsers)
                 }
                 return false
@@ -77,7 +80,7 @@ class UsersFragment :
 
     override fun renderState(state: StackExchangeState) {
         super.renderState(state)
-        when(state.data){
+        when (state.data) {
             is StackExchangeState.Data.Data -> {
                 topStoriesList.show(true)
                 topStoriesSwipeRefresh.isRefreshing = false
